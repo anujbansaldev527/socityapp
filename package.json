@@ -1,0 +1,25 @@
+{
+  "name": "community-os",
+  "private": true,
+  "version": "0.3.0",
+  "packageManager": "pnpm@10.11.0",
+  "engines": {
+    "node": ">=22.13.0 <23"
+  },
+  "scripts": {
+    "dev": "pnpm --filter @community/web dev",
+    "mobile": "pnpm --filter @community/mobile start",
+    "android": "pnpm --filter @community/mobile android",
+    "build": "pnpm --filter @community/web build",
+    "typecheck": "pnpm -r typecheck",
+    "lint": "pnpm -r lint",
+    "test": "node --experimental-strip-types --test tests/*.test.mjs",
+    "seed": "pnpm --filter @community/web seed",
+    "db:test": "pnpm --filter @community/web db:test",
+    "automation:run": "pnpm --filter @community/web automation:run",
+    "smoke": "node scripts/smoke.mjs"
+  },
+  "devDependencies": {
+    "typescript": "~6.0.3"
+  }
+}
